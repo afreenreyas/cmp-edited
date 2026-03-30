@@ -15,11 +15,11 @@ body {
 
 /* Navigation bar */
 nav {
-    background: linear-gradient(360deg, #2a1810 0%, #5b4d3e 100%);
+    background-color: #3c0e18d2;
     font-size: 1.25rem;
-    border-bottom: burlywood solid 3px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.76);
-    color:beige;
+    font-weight: bold;
+    border-bottom: #C8A27C solid 3px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
 }
 
 .navbar {
@@ -28,10 +28,16 @@ nav {
     z-index: 2;
 }
 
-.nav-link:hover {
-    text-decoration: underline solid white 2px;
-    transform: scale(1.01);
+.navbar .nav-link {
+    font-family: "Instrument Serif", serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.04em;
+    color: #F7CAD0 !important;
+}
 
+.nav-link:hover {
+    text-decoration: underline solid #B56576 2px;
+    transform: scale(1.01);
 }
 
 .navbar-nav {
@@ -42,51 +48,52 @@ nav {
     font-size: 2.5rem;
     text-decoration: none;
     margin-left: 1%;
+    font-family: "Instrument Serif", serif;
+    color: #F7CAD0 !important;
 }
 
 .btn {
-    -webkit-border-radius: 60;
-    -moz-border-radius: 60;
     border-radius: 60px;
-    text-shadow: 1px 1px 30px #000000;
-    color: white;
+    color: #3A2119;
+    font-family: "Instrument Serif", serif;
     font-weight: bold;
     font-size: 20px;
-    background: 785b37d2;
+    background: #EBCDB7;
     padding: 10px 20px 10px 20px;
-    border: solid #000000 2px;
+    border: solid #EBCDB7 2px;
     text-decoration: none;
 }
 
 .btn:hover {
-    color: #D3968c;
-    background: #839958;
-    background-image: -webkit-linear-gradient(top, #3E2C23, #4e3b23d2);
-    background-image: -moz-linear-gradient(top, #3E2C23, #4e3b23d2);
-    background-image: -ms-linear-gradient(top, #3E2C23, #4e3b23d2);
-    background-image: -o-linear-gradient(top, #3E2C23, #4e3b23d2);
-    background-image: linear-gradient(to bottom, #3E2C23, #4e3b23d2);
+    color: #EBCDB7;
+    background: #6B8F71;
+    border-color: #6B8F71;
     text-decoration: none;
 }
 
 .fa {
     font-size: 4rem;
     margin-left: 1%;
+    color: #A3C9A8;
 }
 
 /* Footer */
 footer {
-    background: linear-gradient(360deg, #2a1810 0%, #5b4d3e 100%);
+    background: linear-gradient(to bottom, #3A2119, #6b2d2d, #530630);
     padding: 2rem;
+    border-top: 3px solid #C8A27C;
+    transition: background 0.5s ease-out;
+    font-family: 'Instrument Serif',serif;
 }
 
 .footer-title {
     display: inline-block;
-    color: white;
+    color: #d1e2ec;
+    font-family: "Instrument Serif", serif;
     font-size: 1.3rem;
     font-weight: 600;
     padding-bottom: 0.5rem;
-    border-bottom: 0.5px #ffdebe solid;
+    border-bottom: 0.5px #F7CAD0 solid;
 }
 
 .footer-links {
@@ -95,21 +102,22 @@ footer {
 }
 
 .footer-links a {
-    color: white;
+    color: #EADFD3;
     text-decoration: none;
     transition: all 0.3s ease;
     display: inline-block;
+    font-family: "Instrument Serif", serif;
 }
 
 .footer-links a:hover {
-    color: #D3968c;
+    color: #fbfbfb;
     transform: translateX(5px);
 }
 
 .footer-links i {
     margin-right: 8px;
     width: 20px;
-    color: #D3968c;
+    color: #d1e2ec;
     font-size: 1.2rem;
 }
 
@@ -117,20 +125,8 @@ footer {
     animation: bounce 0.3s ease;
 }
 
-@keyframes bounce {
-
-    0%,
-    100% {
-        transform: translateX(0);
-    }
-
-    50% {
-        transform: translateX(3px);
-    }
-}
-
 .footer-bottom {
-    border-top: 1px solid rgba(222, 175, 132, 0.3);
+    border-top: 1px solid rgba(235, 205, 183, 0.3);
     padding-top: 1.5rem;
     align-content: center;
 }
@@ -140,6 +136,7 @@ footer {
         transform: translateY(-10px);
     }
 }
+
 
 /* TRIAL FONT */
 .instrument-serif-regular {
@@ -153,10 +150,19 @@ footer {
 .blog-section{
     max-width: 900px;
     margin: 60px auto;
-    background: rgba(255,255,255,0.9);
-    padding: 40px;
+    background: linear-gradient(
+    135deg,
+    #F7F4D5,   /* light beige (near white) */
+    #D3968C,   /* soft rosy pink */
+    #efb3d0    /* soft moss green */
+  );
+    background-size: 200% 200%;
+    animation: gradientShift 3s ease infinite alternate;
     border-radius: 15px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+    color:white;
+    padding: 40px;
+    border-radius: 15px;
 }
 
 .blogintro h1{
@@ -189,9 +195,10 @@ footer {
 
 .submit{
     margin-top:20px;
+    margin-right:2px;
     padding:12px 25px;
-    border:none;
-    background-color:#785b37d2;
+    border:1px solid #F7F4D5;
+    background-color:transparent;
     color:white;
     border-radius:25px;
     transition:0.3s;
@@ -199,7 +206,7 @@ footer {
 
 .char-count{
     font-size:0.9rem;
-    color:#555;
+    color:white;
     text-align:right;
 }
 
@@ -223,20 +230,54 @@ footer {
     }
 }
 
+/*Mobile*/
+@media (max-width: 576px) {
+    .blog-section {
+        max-width: 95%;
+        margin: 40px auto;
+        padding: 20px;
+    }
+}
+
+/*Tablet*/
+@media (min-width: 577px) and (max-width: 992px) {
+    .blog-section {
+        max-width: 85%;
+        margin: 50px auto;
+        padding: 30px;
+    }
+}
+
 /* BLOG HOME PAGE */
 
 .bloghp-section{
     max-width: 90%;
     margin: 60px auto;
     padding: 20px;
-    background: #D3968C;
+    background: linear-gradient(
+    135deg,
+    #F7F4D5,   /* light beige (near white) */
+    #D3968C,   /* soft rosy pink */
+    #a96b95    /* soft moss green */
+  );
+    background-size: 200% 200%;
+    animation: gradientShift 3s ease infinite alternate;
     border-radius: 15px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.25);
     color:white;
 }
 
+/* Keyframes for animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
 .blog-grid{
-  background:#D3968C;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
@@ -244,10 +285,10 @@ footer {
 
 .card{
   border-radius: 8px;
-  border: 1px solid #105666;
+  border: 1px solid #FDF6F0;
   padding: 15px;
   text-align: center;
-  background:#D3968C;
+  background:transparent;
   transition: 0.3s;
 }
 
@@ -266,6 +307,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
 }
 
 .card36 .card-body {
@@ -279,11 +321,14 @@ footer {
 .submitblog{
     margin: 10%;
     border-radius: 50px;
+    color: white;
+    background:transparent;
+    border-color: white;
 }
 
 .submitblog:hover{
-    color: white;
-    background:brown;
+    color: #839958;
+    background:white;
     text-decoration: none;
     padding: 2%;
 }
