@@ -35,9 +35,11 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".submit").forEach(function (submitBtn) {
         submitBtn.onmouseover = function () {
             submitBtn.style.background = "#3E2C23";
+            submitBtn.style.borderColor="#3E2C23"
         }
         submitBtn.onmouseout = function () {
             submitBtn.style.background = "";
+            submitBtn.style.borderColor=""
         }
     });
 
